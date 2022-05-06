@@ -1,0 +1,18 @@
+spring:
+  freemarker:
+    expose-request-attributes: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        package-scan: sweater
+  datasource:
+    password: root
+    username: root
+    url: jdbc:mysql://localhost:3306/sweater
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  liquibase:
+    change-log: liquibase-changeLog.xml
