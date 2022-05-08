@@ -17,15 +17,15 @@
     <div class="form-group mt-3">
         <form method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <input type="text" class="form-control" name="text" placeholder="Введите сообщение" />
+                <input type="text" class="form-control" name="text" placeholder="Enter message" />
             </div>
             <div class="form-group">
-                <input type="text" class="form-control" name="tag" placeholder="Тэг">
+                <input type="text" class="form-control" name="tag" placeholder="Tag">
             </div>
 
             <input type="hidden" name="_csrf" value="${_csrf.token}" />
             <div class="form-group">
-                <button type="submit" class="btn btn-primary">Добавить</button>
+                <button type="submit" class="btn btn-primary">Add message</button>
             </div>
         </form>
     </div>
@@ -34,9 +34,7 @@
 <div class="card-columns">
     <#list messages as message>
     <div class="card my-3">
-        <#if message.filename??>
-        <img src="/img/${message.filename}" class="card-img-top">
-        </#if>
+
         <div class="m-2">
             <span>${message.text}</span>
             <i>${message.tag}</i>
